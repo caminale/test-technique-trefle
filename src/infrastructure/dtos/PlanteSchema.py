@@ -1,6 +1,6 @@
 from marshmallow import fields, post_load, Schema
 
-from src.plantes.domain.Plante import Plante
+from src.domain.Plante import Plante
 
 
 class PlanteSchema(Schema):

@@ -1,6 +1,13 @@
 USE PLANTESDB;
-CREATE
-OR REPLACE TABLE PLANTE(
+
+CREATE OR REPLACE file format parquetformat type = 'PARQUET';
+
+CREATE STAGE IF NOT EXISTS STAGE_PLANTE_S3
+    url = 's3://bucket-name'
+    file_format = parquetformat
+    credentials = (aws_secret_key = 'xxx' aws_key_id = 'xx');
+
+CREATE OR REPLACE TABLE PLANTE(
    id                 INTEGER  NOT NULL PRIMARY KEY
   ,common_name        VARCHAR(255)
   ,slug               VARCHAR(255)

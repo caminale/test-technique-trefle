@@ -3,3 +3,4 @@ snowflake-sqlalchemy
 apache-airflow-providers-snowflake
 apache-airflow[amazon]
 requests
+awswrangler
